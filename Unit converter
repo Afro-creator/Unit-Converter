@@ -1,0 +1,177 @@
+print("Welcome to the unit converter")
+
+def unit_converter(choice):
+    if choice == '1':
+        print("Length Conversion")
+        print("1. Meters to Kilometers")
+        print("2. Kilometers to Meters")
+        print("3. Miles to Kilometers")
+        print("4. Kilometers to Miles")
+        print("5. Feet to Meters")
+        print("6. Meters to Feet")
+        print("7. Inches to Centimeters")
+        print("8. Centimeters to Inches")
+        print("9. Yards to Meters")
+        print("10. Meters to Yards")
+        print("11. Miles to Meters")
+        print("12. Meters to Miles")
+        print("13. Feet to Kilometers")
+        print("14. Kilometers to Feet")
+        print("15. volume conversion")
+        print("16. area conversion")
+        print("17. speed conversion")
+        print("18. time conversion")
+        length_choice = input("Enter choice (1/2/3/4): ")
+        value = float(input("Enter value to convert: "))
+        
+        if length_choice == '1':
+            result = value / 1000
+            print(f"{value} Meters is {result} Kilometers")
+        elif length_choice == '2':
+            result = value * 1000
+            print(f"{value} Kilometers is {result} Meters")
+        elif length_choice == '3':
+            result = value * 1.60934
+            print(f"{value} Miles is {result} Kilometers")
+        elif length_choice == '4':
+            result = value / 1.60934
+            print(f"{value} Kilometers is {result} Miles")
+        else:
+            print("Invalid choice")
+
+    elif choice == '2':
+        print("Weight Conversion")
+        print("1. Grams to Kilograms")
+        print("2. Kilograms to Grams")
+        print("3. Pounds to Kilograms")
+        print("4. Kilograms to Pounds")
+        weight_choice = input("Enter choice (1/2/3/4): ")
+        value = float(input("Enter value to convert: "))
+        
+        if weight_choice == '1':
+            result = value / 1000
+            print(f"{value} Grams is {result} Kilograms")
+        elif weight_choice == '2':
+            result = value * 1000
+            print(f"{value} Kilograms is {result} Grams")
+        elif weight_choice == '3':
+            result = value * 0.453592
+            print(f"{value} Pounds is {result} Kilograms")
+        elif weight_choice == '4':
+            result = value / 0.453592
+            print(f"{value} Kilograms is {result} Pounds")
+        else:
+            print("Invalid choice")
+
+    elif choice == '3':
+        print("Temperature Conversion")
+        print("1. Celsius to Fahrenheit")
+        print("2. Fahrenheit to Celsius")
+        temp_choice = input("Enter choice (1/2): ")
+        value = float(input("Enter value to convert: "))
+        if temp_choice == '1':
+            result = (value * 9/5) + 32
+            print(f"{value} Celsius is {result} Fahrenheit")
+        elif temp_choice == '2':
+            result = (value - 32) * 5/9
+            print(f"{value} Fahrenheit is {result} Celsius")
+        else:
+            print("Invalid choice")
+
+    elif choice == '4':
+        print("Volume Conversion")
+        print("1. Liters to Milliliters")
+        print("2. Milliliters to Liters")
+        print("3. Gallons to Liters")
+        print("4. Liters to Gallons")
+        volume_choice = input("Enter choice (1/2/3/4): ")
+        value = float(input("Enter value to convert: "))
+        if volume_choice == '1':
+            result = value * 1000
+            print(f"{value} Liters is {result} Milliliters")
+        elif volume_choice == '2':
+            result = value / 1000
+            print(f"{value} Milliliters is {result} Liters")
+        elif volume_choice == '3':
+            result = value * 3.78541
+            print(f"{value} Gallons is {result} Liters")
+        elif volume_choice == '4':
+            result = value / 3.78541
+            print(f"{value} Liters is {result} Gallons")
+        else:
+            print("Invalid choice")
+
+    elif choice == '5':
+        print("Area Conversion")
+        print("1. Square Meters to Square Kilometers")
+        print("2. Square Kilometers to Square Meters")
+        print("3. Acres to Square Meters")
+        print("4. Square Meters to Acres")  
+        area_choice = input("Enter choice (1/2/3/4): ")
+        value = float(input("Enter value to convert: "))
+        if area_choice == '1':  
+            result = value / 1e6
+            print(f"{value} Square Meters is {result} Square Kilometers")
+        elif area_choice == '2':
+            result = value * 1e6
+            print(f"{value} Square Kilometers is {result} Square Meters")
+        elif area_choice == '3':
+            result = value * 4046.86
+            print(f"{value} Acres is {result} Square Meters")   
+        elif area_choice == '4':
+            result = value / 4046.86
+            print(f"{value} Square Meters is {result} Acres")   
+        else:
+            print("Invalid choice")
+    elif choice == '6':
+        print("Speed Conversion")
+        print("1. Kilometers per hour to Miles per hour")
+        print("2. Miles per hour to Kilometers per hour")
+        speed_choice = input("Enter choice (1/2): ")
+        value = float(input("Enter value to convert: "))    
+        if speed_choice == '1':
+            result = value / 1.60934
+            print(f"{value} Kilometers per hour is {result} Miles per hour")
+        elif speed_choice == '2':
+            result = value * 1.60934
+            print(f"{value} Miles per hour is {result} Kilometers per hour")
+        else:
+            print("Invalid choice")
+    elif choice == '7':
+        print("Time Conversion")
+        print("1. Seconds to Minutes")
+        print("2. Minutes to Seconds")
+        print("3. Hours to Minutes")
+        print("4. Minutes to Hours")
+        time_choice = input("Enter choice (1/2/3/4): ")
+        value = float(input("Enter value to convert: "))    
+        if time_choice == '1':
+            result = value / 60
+            print(f"{value} Seconds is {result} Minutes")
+        elif time_choice == '2':
+            result = value * 60
+            print(f"{value} Minutes is {result} Seconds")
+        elif time_choice == '3':
+            result = value * 60
+            print(f"{value} Hours is {result} Minutes")
+        elif time_choice == '4':
+            result = value / 60
+            print(f"{value} Minutes is {result} Hours")
+        else:
+            print("Invalid choice")
+    else:
+            print("Invalid choice")
+    
+
+while True:
+    print("2. Weight")
+    print("3. Temperature")
+    print("4. Volume")
+    choice = input("Enter choice (1/2/3/4): ")
+
+    unit_converter(choice)
+
+    again = input("Do you want to perform another conversion? (yes/no): ").lower()
+    if again != 'yes':
+        print("Goodbye!")
+        break
